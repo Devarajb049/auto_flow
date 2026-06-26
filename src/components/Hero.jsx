@@ -1,8 +1,8 @@
 import React from 'react';
-
+import ScrollReveal from './ScrollReveal';
 export default function Hero() {
   return (
-    <section aria-label="Hero" className="relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-24 lg:py-32 flex flex-col items-center justify-center min-h-[90vh] transition-colors duration-300">
+    <ScrollReveal animation="fade-up" className="relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-24 lg:py-32 flex flex-col items-center justify-center min-h-[90vh] transition-colors duration-300">
       {/* Subtle Grid Background Pattern */}
       <div className="absolute inset-0 -z-20 bg-[linear-gradient(to_right,rgba(148,163,184,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.06)_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
 
@@ -140,6 +140,6 @@ export default function Hero() {
 
         </div>
       </div>
-    </section>
+    </ScrollReveal>
   );
 }

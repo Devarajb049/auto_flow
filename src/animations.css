@@ -1,0 +1,61 @@
+/* src/animations.css */
+/* Base hidden state */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Fade Up */
+.fade-up {
+  /* No extra */
+}
+.fade-up--active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade Down */
+.fade-down {
+  transform: translateY(-20px);
+}
+.fade-down--active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Zoom In */
+.zoom-in {
+  transform: scale(0.9);
+}
+.zoom-in--active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Slide Left */
+.slide-left {
+  transform: translateX(20px);
+}
+.slide-left--active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide Right */
+.slide-right {
+  transform: translateX(-20px);
+}
+.slide-right--active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

@@ -2,6 +2,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 @import "@fontsource/inter/index.css";
 @import "@fontsource/outfit/index.css";
+@import "./animations.css";
 
 @theme {
   --color-slate-dark: #0b0f19;
