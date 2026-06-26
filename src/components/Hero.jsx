@@ -26,13 +26,13 @@ export default function Hero() {
         <div className="relative mb-8 inline-block transform -rotate-1">
           <span className="absolute inset-0 bg-accent-yellow -skew-y-1 transform rounded-md shadow-sm"></span>
           <h2 className="relative font-display text-3xl font-black text-slate-950 uppercase tracking-tight px-6 py-3.5 sm:text-5xl">
-            GRADIX TECHNOLOGIES
+            AUTOFLOW PLATFORM
           </h2>
         </div>
 
         {/* Subtitle Description */}
         <p className="text-sm md:text-base text-text-secondary dark:text-slate-300 max-w-2xl leading-relaxed mb-10">
-          Gradix Technologies helps startups and businesses grow through reliable digital solutions, modern design, and performance-focused strategies.
+          AutoFlow automates your logical branch tasks, model tuning, and data ingestion processes with bank-grade encryption and isolated VPC boundaries.
         </p>
 
         {/* Buttons Panel */}
