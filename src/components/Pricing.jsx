@@ -315,7 +315,7 @@ export default function Pricing() {
         </div>
 
         {/* Pricing Matrix Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
           {/* Card 1: Starter */}
           <article className="glass-panel aurora-card rounded-2xl p-8 flex flex-col justify-between hover:border-accent-blue/30 dark:hover:border-accent-blue/20 hover:shadow-md hover:-translate-y-1.5 transition-all duration-300 shadow-sm cursor-pointer group">
             <div>

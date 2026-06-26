@@ -50,7 +50,7 @@ export default function Features() {
 
   // ResizeObserver / matchMedia context lock
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 767px)');
+    const mediaQuery = window.matchMedia('(max-width: 1023px)');
     
     const handleBreakpointChange = (e) => {
       if (e.matches) {
@@ -90,8 +90,8 @@ export default function Features() {
           </p>
         </div>
 
-        {/* Desktop Bento Grid (hidden below 768px) */}
-        <div className="hidden md:grid grid-cols-3 gap-6 auto-rows-[250px]">
+        {/* Desktop Bento Grid (hidden below 1024px) */}
+        <div className="hidden lg:grid grid-cols-3 gap-6 auto-rows-[250px]">
           {/* Card 1: Ingestion */}
           <div
             onMouseEnter={() => handleBentoHover(0)}
@@ -177,8 +177,8 @@ export default function Features() {
           </div>
         </div>
 
-        {/* Mobile Accordion Layout (visible only below 768px) */}
-        <div className="md:hidden flex flex-col gap-4">
+        {/* Mobile Accordion Layout (visible only below 1024px) */}
+        <div className="lg:hidden flex flex-col gap-4">
           {features.map((feature, index) => {
             const isActive = activeAccordionIndex === index;
             return (
