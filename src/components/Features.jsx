@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import ScrollReveal from './ScrollReveal';
 
 const features = [
   {
@@ -104,7 +105,7 @@ export default function Features() {
   };
 
   return (
-    <section id="features" aria-label="Platform Features" className="py-20 md:py-28 bg-white dark:bg-slate-dark text-slate-900 dark:text-white transition-colors duration-300 relative overflow-hidden">
+    <ScrollReveal id="features" aria-label="Platform Features" className="py-20 md:py-28 bg-white dark:bg-slate-dark text-slate-900 dark:text-white transition-colors duration-300 relative overflow-hidden" animation="fade-up">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mb-16 md:mb-24 text-center md:text-left md:mx-0 mx-auto">
@@ -361,7 +362,7 @@ export default function Features() {
           })}
         </div>
       </div>
-    </section>
+    </ScrollReveal>
   );
 }
 

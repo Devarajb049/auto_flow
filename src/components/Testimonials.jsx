@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollReveal from './ScrollReveal';
 
 const reviews = [
   {
@@ -23,7 +24,7 @@ const reviews = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" aria-label="Client Testimonials" className="py-20 md:py-28 bg-white dark:bg-slate-dark border-t border-slate-100 dark:border-white/5 relative overflow-hidden transition-colors duration-300">
+    <ScrollReveal id="testimonials" aria-label="Client Testimonials" className="py-20 md:py-28 bg-white dark:bg-slate-dark border-t border-slate-100 dark:border-white/5 relative overflow-hidden transition-colors duration-300" animation="fade-up">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
@@ -71,6 +72,6 @@ export default function Testimonials() {
           ))}
         </div>
       </div>
-    </section>
+    </ScrollReveal>
   );
 }

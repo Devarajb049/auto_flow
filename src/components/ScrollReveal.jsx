@@ -21,6 +21,7 @@ export default function ScrollReveal({
   repeat = false,
   className = '',
   children,
+  ...rest
 }) {
   const { ref, isVisible } = useScrollAnimation({ once: !repeat });
 
@@ -32,7 +33,7 @@ export default function ScrollReveal({
   const classes = `scroll-reveal ${animation} ${isVisible ? `${animation}--active` : ''} ${className}`;
 
   return (
-    <div ref={ref} className={classes} style={style}>
+    <div ref={ref} className={classes} style={style} {...rest}>
       {children}
     </div>
   );

@@ -1,8 +1,10 @@
 import React from 'react';
+import ScrollReveal from './ScrollReveal';
 
 export default function Footer() {
   return (
-    <footer className="bg-white dark:bg-slate-dark border-t border-slate-100 dark:border-white/5 py-12 md:py-16 transition-colors duration-300">
+    <ScrollReveal animation="fade-up">
+      <footer className="bg-white dark:bg-slate-dark border-t border-slate-100 dark:border-white/5 pt-12 pb-20 md:py-16 transition-colors duration-300">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
@@ -70,6 +72,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+      </footer>
+    </ScrollReveal>
   );
 }

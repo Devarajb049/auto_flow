@@ -99,7 +99,7 @@ export default function Navbar({ theme, onToggleTheme }) {
 
       {/* Mobile nav dropdown */}
       {isOpen && (
-        <div className="md:hidden mt-2 rounded-2xl border border-slate-200/50 dark:border-white/10 bg-white/95 dark:bg-slate-dark/95 backdrop-blur-xl px-6 py-6 transition-all duration-300 ease-in-out shadow-lg animate-slide-down">
+        <div className="md:hidden mt-2 rounded-2xl border border-slate-200/50 dark:border-white/10 bg-white/95 dark:bg-slate-dark/95 backdrop-blur-xl px-6 py-6 transition-all duration-300 ease-in-out shadow-lg animate-slide-down max-h-[calc(100vh-120px)] overflow-y-auto">
           <nav aria-label="Mobile Navigation" className="flex flex-col gap-2">
             {navLinks.map((link) => (
               <a

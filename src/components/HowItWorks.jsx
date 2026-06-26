@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import ScrollReveal from './ScrollReveal';
 
 const steps = [
   {
@@ -61,7 +62,7 @@ export default function HowItWorks() {
   const isReset = activeStep < prevStepRef.current;
 
   return (
-    <section id="process" aria-label="How it works" className="py-20 md:py-28 bg-slate-50/50 dark:bg-slate-card/10 border-t border-slate-100 dark:border-white/5 relative overflow-hidden transition-colors duration-300">
+    <ScrollReveal id="process" aria-label="How it works" className="py-20 md:py-28 bg-slate-50/50 dark:bg-slate-card/10 border-t border-slate-100 dark:border-white/5 relative overflow-hidden transition-colors duration-300" animation="fade-up">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-16 md:mb-24">
@@ -259,6 +260,6 @@ export default function HowItWorks() {
 
         </div>
       </div>
-    </section>
+    </ScrollReveal>
   );
 }

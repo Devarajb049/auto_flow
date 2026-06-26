@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import ScrollReveal from './ScrollReveal';
 
 // Pricing config matrix
 const regionalTariff = {
@@ -305,7 +306,7 @@ export default function Pricing() {
   };
 
   return (
-    <section id="pricing" aria-label="Pricing Packages" className="py-20 md:py-28 bg-white dark:bg-slate-card/5 border-t border-slate-100 dark:border-white/5 relative overflow-hidden transition-colors duration-300">
+    <ScrollReveal id="pricing" aria-label="Pricing Packages" className="py-20 md:py-28 bg-white dark:bg-slate-card/5 border-t border-slate-100 dark:border-white/5 relative overflow-hidden transition-colors duration-300" animation="fade-up">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-[500px] w-[500px] rounded-full bg-accent-blue/5 blur-3xl animate-pulse-slow"></div>
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -685,6 +686,6 @@ export default function Pricing() {
           </div>
         </div>
       )}
-    </section>
+    </ScrollReveal>
   );
 }
