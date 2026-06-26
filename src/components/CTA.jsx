@@ -1,8 +1,9 @@
 import React from 'react';
+import ScrollReveal from './ScrollReveal';
 
 export default function CTA() {
   return (
-    <section aria-label="Get Started Call to Action" className="py-16 md:py-24 bg-white dark:bg-slate-dark relative overflow-hidden transition-colors duration-300">
+    <ScrollReveal aria-label="Get Started Call to Action" className="py-16 md:py-24 bg-white dark:bg-slate-dark relative overflow-hidden transition-colors duration-300" animation="fade-up">
       {/* Decorative Blur */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-96 w-96 rounded-full bg-accent-blue/10 blur-3xl"></div>
       
@@ -33,6 +34,6 @@ export default function CTA() {
           </div>
         </div>
       </div>
-    </section>
+    </ScrollReveal>
   );
 }

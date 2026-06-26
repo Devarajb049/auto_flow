@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ScrollReveal from './ScrollReveal';
 
 const faqs = [
   {
@@ -23,7 +24,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section id="faq" aria-label="Frequently Asked Questions" className="py-20 md:py-28 bg-white dark:bg-slate-card/5 border-t border-slate-100 dark:border-white/5 relative overflow-hidden transition-colors duration-300">
+    <ScrollReveal id="faq" aria-label="Frequently Asked Questions" className="py-20 md:py-28 bg-white dark:bg-slate-card/5 border-t border-slate-100 dark:border-white/5 relative overflow-hidden transition-colors duration-300" animation="fade-up">
       <div className="mx-auto max-w-4xl px-6">
         {/* Header */}
         <div className="text-center mb-16">
@@ -80,6 +81,6 @@ export default function FAQ() {
           })}
         </div>
       </div>
-    </section>
+    </ScrollReveal>
   );
 }

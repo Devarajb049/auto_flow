@@ -1,8 +1,9 @@
 import React from 'react';
+import ScrollReveal from './ScrollReveal';
 
 export default function Companies() {
   return (
-    <section aria-label="Trusted Partners" className="border-y border-slate-100 dark:border-white/5 bg-slate-50/50 dark:bg-slate-card/10 py-10 transition-colors duration-300">
+    <ScrollReveal aria-label="Trusted Partners" className="border-y border-slate-100 dark:border-white/5 bg-slate-50/50 dark:bg-slate-card/10 py-10 transition-colors duration-300" animation="fade-up">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <p className="text-center text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">
           Trusted by engineering teams at the world's most innovative companies
@@ -46,6 +47,6 @@ export default function Companies() {
           </div>
         </div>
       </div>
-    </section>
+    </ScrollReveal>
   );
 }
