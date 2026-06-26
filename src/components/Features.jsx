@@ -5,38 +5,67 @@ const features = [
     title: "Instant Ingestion",
     description: "Connect to databases, message queues, and cloud files with a single click. Extract, parse, and structure your data automatically.",
     icon: (className) => (
-      <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
+        {/* Triple Database Cylinders with connection lines */}
+        <path d="M4 6c0-1.66 3.58-3 8-3s8 1.34 8 3" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M4 6v4c0 1.66 3.58 3 8 3s8-1.34 8-3V6" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M4 10v4c0 1.66 3.58 3 8 3s8-1.34 8-3v-4" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M4 14v4c0 1.66 3.58 3 8 3s8-1.34 8-3v-4" strokeLinecap="round" strokeLinejoin="round" />
+        {/* Ingest Arrow */}
+        <path d="M12 2v6m0 0l-2.5-2.5M12 8l2.5-2.5" strokeLinecap="round" strokeLinejoin="round" className="text-accent-blue" strokeWidth={2} />
       </svg>
     ),
-    details: "Supports PostgreSQL, MongoDB, Kafka, AWS S3, and 50+ other integrations. Zero setup time required."
+    details: "Supports PostgreSQL, MongoDB, Kafka, AWS S3, and 50+ other integrations. Zero setup time."
   },
   {
     title: "AI Model Tuning",
     description: "Tune custom small language models on your private data. Maximize performance while maintaining strict data governance.",
     icon: (className) => (
-      <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.813 15.904L9 21l8.982-1.185a2.693 2.693 0 001.661-1.077L19.75 12.24m-9.937 3.664L19.75 12.24m-9.937 3.664L3 14.25M19.75 12.24l-3.83-3.83M19.75 12.24L21.75 10a2.692 2.692 0 00-3.79-3.79L15.9 8.16m-2.98 2.98L3 14.25" />
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
+        {/* Brain network graph */}
+        <circle cx="12" cy="5" r="2" fill="currentColor" />
+        <circle cx="5" cy="12" r="2" fill="currentColor" />
+        <circle cx="12" cy="12" r="3" fill="currentColor" fillOpacity={0.3} />
+        <circle cx="19" cy="12" r="2" fill="currentColor" />
+        <circle cx="12" cy="19" r="2" fill="currentColor" />
+        <line x1="12" y1="7" x2="12" y2="9" />
+        <line x1="12" y1="15" x2="12" y2="17" />
+        <line x1="7" y1="12" x2="9" y2="12" />
+        <line x1="15" y1="12" x2="17" y2="12" />
+        <line x1="7.05" y1="7.05" x2="9.9" y2="9.9" strokeDasharray="1 1" />
+        <line x1="16.95" y1="16.95" x2="14.1" y2="14.1" strokeDasharray="1 1" />
+        <line x1="16.95" y1="7.05" x2="14.1" y2="9.9" strokeDasharray="1 1" />
+        <line x1="7.05" y1="16.95" x2="9.9" y2="14.1" strokeDasharray="1 1" />
       </svg>
     ),
-    details: "Deploy secure training containers inside your virtual private cloud. Your training data never leaves your network boundary."
+    details: "Deploy secure training containers inside your VPC. Your training data never leaves your network."
   },
   {
     title: "Enterprise Security",
     description: "Bank-grade encryption for all workloads. SOC 2 Type II compliant with comprehensive audit logging and access controls.",
     icon: (className) => (
-      <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
+        {/* Shield with locking core */}
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" strokeLinecap="round" strokeLinejoin="round" />
+        <rect x="9" y="11" width="6" height="5" rx="1" fill="currentColor" fillOpacity={0.25} />
+        <path d="M10.5 11V9.5a1.5 1.5 0 113 0v1.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
-    details: "End-to-end TLS 1.3 encryption, static analysis on active datasets, and role-based directory mapping integrations."
+    details: "End-to-end TLS 1.3 encryption, static analysis, and role-based directory mapping."
   },
   {
     title: "Predictive Flows",
     description: "Automate complex logical branch tasks. Create workflows that dynamically adjust based on database events.",
     icon: (className) => (
-      <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 6.562M5.618 11.15A11.95 11.95 0 003 12c0 2.21.79 4.23 2.12 5.83M12 8V4l3 3" />
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
+        {/* Decision nodes and branching flow lines */}
+        <circle cx="5" cy="12" r="2.5" fill="currentColor" />
+        <path d="M7.5 12h3.5c1 0 2-1 2-2V6.5c0-1 1-1.5 2-1.5h4" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M7.5 12h3.5c1 0 2 1 2 2v3.5c0 1 1 1.5 2 1.5h4" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M7.5 12h11.5" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="2 2" />
+        <circle cx="20" cy="5" r="2" fill="currentColor" />
+        <circle cx="20" cy="12" r="1.5" />
+        <circle cx="20" cy="19" r="2" fill="currentColor" />
       </svg>
     ),
     details: "Visual low-code designer lets you map dependencies. Webhooks trigger model executions with sub-second latency."
@@ -48,21 +77,18 @@ export default function Features() {
   const [activeAccordionIndex, setActiveAccordionIndex] = useState(0);
   const activeBentoIndexRef = useRef(0);
 
-  // ResizeObserver / matchMedia context lock
+  // Sync index from desktop to mobile on breakpoint crossover
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 1023px)');
     
     const handleBreakpointChange = (e) => {
       if (e.matches) {
-        // Sync the index value from the desktop ref over to the mobile state
         setActiveAccordionIndex(activeBentoIndexRef.current);
       }
     };
 
-    // Attach event listener
     mediaQuery.addEventListener('change', handleBreakpointChange);
 
-    // Initial check on load
     if (mediaQuery.matches) {
       setActiveAccordionIndex(activeBentoIndexRef.current);
     }
@@ -91,8 +117,10 @@ export default function Features() {
         </div>
 
         {/* Desktop Bento Grid (hidden below 1024px) */}
-        <div className="hidden lg:grid grid-cols-3 gap-6 auto-rows-[250px]">
-          {/* Card 1: Ingestion */}
+        {/* Changed auto-rows from 250px to 280px to provide a spacious layout and prevent text clipping */}
+        <div className="hidden lg:grid grid-cols-3 gap-6 auto-rows-[280px]">
+          
+          {/* Card 1: Instant Ingestion (col-span-2) */}
           <div
             onMouseEnter={() => handleBentoHover(0)}
             className={`col-span-2 row-span-1 border aurora-card rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] group cursor-pointer ${
@@ -101,19 +129,62 @@ export default function Features() {
                 : 'border-slate-200/60 dark:border-white/5 bg-slate-50/50 dark:bg-slate-card/25 hover:border-accent-blue/40 dark:hover:border-accent-blue/30 hover:shadow-accent-blue/5'
             }`}
           >
-            <div className="flex items-start gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent-blue/10 text-accent-blue group-hover:scale-105 transition-all">
-                {features[0].icon("w-6 h-6")}
+            <div className="grid grid-cols-5 gap-8 h-full items-center">
+              {/* Text Content */}
+              <div className="col-span-3 flex flex-col justify-between h-full">
+                <div className="flex items-start gap-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent-blue/10 text-accent-blue group-hover:scale-105 transition-all">
+                    {features[0].icon("w-6 h-6")}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{features[0].title}</h3>
+                    <p className="text-sm text-text-secondary dark:text-slate-400 leading-relaxed">{features[0].description}</p>
+                  </div>
+                </div>
+                <div className="text-xs font-mono text-accent-blue mt-4">{features[0].details}</div>
               </div>
-              <div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{features[0].title}</h3>
-                <p className="text-sm text-text-secondary dark:text-slate-400 leading-relaxed">{features[0].description}</p>
+
+              {/* Animated Ingestion Pipeline Mockup */}
+              <div className="col-span-2 relative hidden md:flex items-center justify-center border border-slate-200/40 dark:border-white/5 rounded-xl bg-slate-50/50 dark:bg-slate-dark/30 overflow-hidden p-3 h-full">
+                <svg className="w-full h-full" viewBox="0 0 200 120" fill="none">
+                  {/* Sources */}
+                  <g transform="translate(10, 15)">
+                    <rect width="50" height="20" rx="4" className="fill-white dark:fill-slate-card stroke-slate-200 dark:stroke-white/10" strokeWidth="1" />
+                    <circle cx="8" cy="10" r="3" className="fill-accent-blue" />
+                    <text x="16" y="13" className="font-sans text-[8px] font-semibold fill-slate-700 dark:fill-slate-300">Postgres</text>
+                  </g>
+                  <g transform="translate(10, 50)">
+                    <rect width="50" height="20" rx="4" className="fill-white dark:fill-slate-card stroke-slate-200 dark:stroke-white/10" strokeWidth="1" />
+                    <circle cx="8" cy="10" r="3" className="fill-accent-emerald" />
+                    <text x="16" y="13" className="font-sans text-[8px] font-semibold fill-slate-700 dark:fill-slate-300">AWS S3</text>
+                  </g>
+                  <g transform="translate(10, 85)">
+                    <rect width="50" height="20" rx="4" className="fill-white dark:fill-slate-card stroke-slate-200 dark:stroke-white/10" strokeWidth="1" />
+                    <circle cx="8" cy="10" r="3" className="fill-accent-purple" />
+                    <text x="16" y="13" className="font-sans text-[8px] font-semibold fill-slate-700 dark:fill-slate-300">Kafka</text>
+                  </g>
+
+                  {/* Destination */}
+                  <g transform="translate(140, 45)">
+                    <rect width="50" height="30" rx="6" className="fill-accent-blue/10 stroke-accent-blue/30" strokeWidth="1.5" />
+                    <text x="8" y="18" className="font-display text-[9px] font-bold fill-accent-blue">AutoFlow</text>
+                  </g>
+
+                  {/* Connection Lines */}
+                  <path d="M60 25 C100 25, 100 58, 140 58" className="stroke-slate-200 dark:stroke-white/5" strokeWidth="1" fill="none" />
+                  <path d="M60 60 L140 60" className="stroke-slate-200 dark:stroke-white/5" strokeWidth="1" fill="none" />
+                  <path d="M60 95 C100 95, 100 62, 140 62" className="stroke-slate-200 dark:stroke-white/5" strokeWidth="1" fill="none" />
+
+                  {/* Animated Flowing Dots */}
+                  <path d="M60 25 C100 25, 100 58, 140 58" className="stroke-accent-blue animate-flow-line" strokeWidth="1.5" fill="none" strokeDasharray="5 15" />
+                  <path d="M60 60 L140 60" className="stroke-accent-emerald animate-flow-line" strokeWidth="1.5" fill="none" strokeDasharray="5 15" style={{ animationDelay: '300ms' }} />
+                  <path d="M60 95 C100 95, 100 62, 140 62" className="stroke-accent-purple animate-flow-line" strokeWidth="1.5" fill="none" strokeDasharray="5 15" style={{ animationDelay: '600ms' }} />
+                </svg>
               </div>
             </div>
-            <div className="text-xs font-mono text-accent-blue mt-4">{features[0].details}</div>
           </div>
 
-          {/* Card 2: Model Tuning */}
+          {/* Card 2: AI Model Tuning (col-span-1, row-span-2 - Tall Card) */}
           <div
             onMouseEnter={() => handleBentoHover(1)}
             className={`col-span-1 row-span-2 border aurora-card rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] group cursor-pointer ${
@@ -131,50 +202,109 @@ export default function Features() {
                 <p className="text-sm text-text-secondary dark:text-slate-400 leading-relaxed">{features[1].description}</p>
               </div>
             </div>
-            <div className="text-xs font-mono text-accent-purple mt-6">{features[1].details}</div>
+
+            {/* Parameter Tuning Panel Widget (Fills middle gap elegantly) */}
+            <div className="my-6 border border-slate-200/40 dark:border-white/5 rounded-xl bg-slate-50/60 dark:bg-slate-dark/40 p-4 flex flex-col gap-3.5 shadow-inner">
+              <div className="text-[10px] font-mono font-bold tracking-wider text-slate-400 dark:text-slate-500 uppercase">
+                Hyperparameters
+              </div>
+              
+              {/* Slider 1 */}
+              <div className="flex flex-col gap-1">
+                <div className="flex justify-between text-xs font-mono">
+                  <span className="text-slate-600 dark:text-slate-400">Temperature</span>
+                  <span className="text-accent-purple font-semibold">0.72</span>
+                </div>
+                <div className="h-1.5 w-full bg-slate-200 dark:bg-white/10 rounded-full overflow-hidden">
+                  <div className="h-full bg-accent-purple rounded-full" style={{ width: '72%' }} />
+                </div>
+              </div>
+
+              {/* Slider 2 */}
+              <div className="flex flex-col gap-1">
+                <div className="flex justify-between text-xs font-mono">
+                  <span className="text-slate-600 dark:text-slate-400">Top P</span>
+                  <span className="text-accent-purple font-semibold">0.90</span>
+                </div>
+                <div className="h-1.5 w-full bg-slate-200 dark:bg-white/10 rounded-full overflow-hidden">
+                  <div className="h-full bg-accent-purple rounded-full" style={{ width: '90%' }} />
+                </div>
+              </div>
+
+              {/* Mock system prompt terminal line */}
+              <div className="mt-1.5 rounded bg-slate-100 dark:bg-slate-card/60 p-2 font-mono text-[9px] text-slate-600 dark:text-slate-400 border border-slate-200/40 dark:border-white/5">
+                <span className="text-accent-blue">&gt;</span> optimize_branches: <span className="text-accent-emerald">true</span>
+              </div>
+            </div>
+
+            <div className="text-xs font-mono text-accent-purple">{features[1].details}</div>
           </div>
 
-          {/* Card 3: Security */}
+          {/* Card 3: Enterprise Security (col-span-1, row-span-1) */}
           <div
             onMouseEnter={() => handleBentoHover(2)}
-            className={`col-span-1 row-span-1 border aurora-card rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] group cursor-pointer ${
+            className={`col-span-1 row-span-1 border aurora-card rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] group cursor-pointer relative overflow-hidden ${
               activeBentoIndex === 2
                 ? 'border-accent-emerald/50 dark:border-accent-emerald/40 shadow-md shadow-accent-emerald/5 bg-accent-emerald/[0.02] dark:bg-accent-emerald/[0.02]'
                 : 'border-slate-200/60 dark:border-white/5 bg-slate-50/50 dark:bg-slate-card/25 hover:border-accent-emerald/40 dark:hover:border-accent-emerald/30 hover:shadow-accent-emerald/5'
             }`}
           >
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 relative z-10">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent-emerald/10 text-accent-emerald group-hover:scale-105 transition-all">
                 {features[2].icon("w-6 h-6")}
               </div>
               <div>
                 <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{features[2].title}</h3>
-                <p className="text-sm text-text-secondary dark:text-slate-400 leading-relaxed line-clamp-3">{features[2].description}</p>
+                <p className="text-sm text-text-secondary dark:text-slate-400 leading-relaxed pr-8">{features[2].description}</p>
               </div>
             </div>
-            <div className="text-xs font-mono text-accent-emerald mt-2">{features[2].details}</div>
+            <div className="text-xs font-mono text-accent-emerald relative z-10 mt-2">{features[2].details}</div>
+
+            {/* Glowing Security Shield Radar Background Decor */}
+            <div className="absolute bottom-2 right-2 opacity-5 dark:opacity-[0.08] pointer-events-none group-hover:scale-105 transition-transform duration-300">
+              <svg width="90" height="90" viewBox="0 0 100 100" fill="none" className="text-accent-emerald">
+                <circle cx="50" cy="50" r="45" stroke="currentColor" strokeWidth="1" strokeDasharray="4 4" />
+                <circle cx="50" cy="50" r="30" stroke="currentColor" strokeWidth="1.5" />
+                <circle cx="50" cy="50" r="15" stroke="currentColor" strokeWidth="2" />
+                <path d="M50 38 L60 48 L50 58 L40 48 Z" fill="currentColor" fillOpacity="0.2" />
+              </svg>
+            </div>
           </div>
 
-          {/* Card 4: Flows */}
+          {/* Card 4: Predictive Flows (col-span-1, row-span-1) */}
           <div
             onMouseEnter={() => handleBentoHover(3)}
-            className={`col-span-1 row-span-1 border aurora-card rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] group cursor-pointer ${
+            className={`col-span-1 row-span-1 border aurora-card rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] group cursor-pointer relative overflow-hidden ${
               activeBentoIndex === 3
                 ? 'border-accent-blue/50 dark:border-accent-blue/40 shadow-md shadow-accent-blue/5 bg-accent-blue/[0.02] dark:bg-accent-blue/[0.02]'
                 : 'border-slate-200/60 dark:border-white/5 bg-slate-50/50 dark:bg-slate-card/25 hover:border-accent-blue/40 dark:hover:border-accent-blue/30 hover:shadow-accent-blue/5'
             }`}
           >
-            <div className="flex items-start gap-4">
+            <div className="flex flex-col gap-4 relative z-10">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent-blue/10 text-accent-blue group-hover:scale-105 transition-all">
                 {features[3].icon("w-6 h-6")}
               </div>
               <div>
                 <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{features[3].title}</h3>
-                <p className="text-sm text-text-secondary dark:text-slate-400 leading-relaxed">{features[3].description}</p>
+                <p className="text-sm text-text-secondary dark:text-slate-400 leading-relaxed pr-8">{features[3].description}</p>
               </div>
             </div>
-            <div className="text-xs font-mono text-accent-blue mt-4">{features[3].details}</div>
+            <div className="text-xs font-mono text-accent-blue relative z-10 mt-2">{features[3].details}</div>
+
+            {/* Glowing Branching Flowchart Background Decor */}
+            <div className="absolute bottom-4 right-4 opacity-5 dark:opacity-[0.08] pointer-events-none group-hover:scale-105 transition-transform duration-300">
+              <svg width="85" height="85" viewBox="0 0 100 100" fill="none" className="text-accent-blue">
+                <path d="M15 50 H40 C45 50, 48 35, 55 35 H80" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                <path d="M15 50 H40 C45 50, 48 65, 55 65 H80" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                <path d="M15 50 H80" stroke="currentColor" strokeWidth="1" strokeDasharray="3 3" />
+                <circle cx="15" cy="50" r="5" fill="currentColor" />
+                <circle cx="80" cy="35" r="5" fill="currentColor" />
+                <circle cx="80" cy="50" r="3.5" stroke="currentColor" strokeWidth="1.5" />
+                <circle cx="80" cy="65" r="5" fill="currentColor" />
+              </svg>
+            </div>
           </div>
+
         </div>
 
         {/* Mobile Accordion Layout (visible only below 1024px) */}
@@ -234,3 +364,4 @@ export default function Features() {
     </section>
   );
 }
+

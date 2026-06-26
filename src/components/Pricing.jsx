@@ -141,7 +141,15 @@ export default function Pricing() {
     return `${symbol}${value.toLocaleString()}`;
   };
 
-  const updateDOMPrices = () => {
+  const triggerPopAnimation = (ref) => {
+    if (!ref.current) return;
+    ref.current.classList.remove('animate-price-pop');
+    // Force a DOM reflow to restart the hardware-accelerated keyframe animation
+    void ref.current.offsetWidth;
+    ref.current.classList.add('animate-price-pop');
+  };
+
+  const updateDOMPrices = (shouldAnimate = true) => {
     const currency = currencyRef.current;
     const cycle = cycleRef.current;
 
@@ -149,6 +157,7 @@ export default function Pricing() {
     const starterPrice = calculatePrice('starter', currency, cycle);
     if (starterPriceRef.current) {
       starterPriceRef.current.textContent = formatPrice(starterPrice, currency);
+      if (shouldAnimate) triggerPopAnimation(starterPriceRef);
     }
     if (starterSubtextRef.current) {
       starterSubtextRef.current.textContent = cycle === 'annual'
@@ -160,6 +169,7 @@ export default function Pricing() {
     const proPrice = calculatePrice('pro', currency, cycle);
     if (proPriceRef.current) {
       proPriceRef.current.textContent = formatPrice(proPrice, currency);
+      if (shouldAnimate) triggerPopAnimation(proPriceRef);
     }
     if (proSubtextRef.current) {
       proSubtextRef.current.textContent = cycle === 'annual'
@@ -171,6 +181,7 @@ export default function Pricing() {
     const enterprisePrice = calculatePrice('enterprise', currency, cycle);
     if (enterprisePriceRef.current) {
       enterprisePriceRef.current.textContent = formatPrice(enterprisePrice, currency);
+      if (shouldAnimate) triggerPopAnimation(enterprisePriceRef);
     }
     if (enterpriseSubtextRef.current) {
       enterpriseSubtextRef.current.textContent = cycle === 'annual'
@@ -179,9 +190,9 @@ export default function Pricing() {
     }
   };
 
-  // Perform initial DOM population on mount
+  // Perform initial DOM population on mount (without pop animation)
   useEffect(() => {
-    updateDOMPrices();
+    updateDOMPrices(false);
   }, []);
 
   const handleCycleChange = (newCycle) => {

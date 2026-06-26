@@ -13,7 +13,9 @@ export default function Hero() {
           <div className="lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left">
             {/* Pill Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-blue/10 dark:bg-accent-blue/15 border border-accent-blue/20 dark:border-accent-blue/30 mb-6 animate-fade-in">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent-blue animate-pulse"></span>
+              <svg className="w-3.5 h-3.5" fill="none">
+                <use href="/icons.svg#social-icon" />
+              </svg>
               <span className="text-[10px] font-bold tracking-wider uppercase text-accent-blue">Introducing AutoFlow 2.0</span>
             </div>
 
@@ -49,8 +51,11 @@ export default function Hero() {
               {/* Ghost Secondary Button */}
               <a
                 href="#features"
-                className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-lg border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 px-8 text-xs font-bold tracking-wider text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-white/10 hover:border-slate-300 dark:hover:border-white/20 hover:-translate-y-0.5 hover:shadow-sm active:scale-[0.98] transition-all duration-300"
+                className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-lg border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 px-8 text-xs font-bold tracking-wider text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-white/10 hover:border-slate-300 dark:hover:border-white/20 hover:-translate-y-0.5 hover:shadow-sm active:scale-[0.98] transition-all duration-300 gap-2.5 group/btn"
               >
+                <svg className="w-4 h-4 text-accent-purple" fill="none">
+                  <use href="/icons.svg#documentation-icon" />
+                </svg>
                 OUR SERVICES
               </a>
             </div>
