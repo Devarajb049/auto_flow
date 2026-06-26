@@ -8,9 +8,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <a href="#" className="flex items-center gap-2.5 group mb-4">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent-blue font-display text-sm font-bold text-white shadow-md shadow-accent-blue/20">
-                A
-              </div>
+              <img src="/logo.svg" className="h-8 w-8 object-contain transition-all duration-300" alt="AutoFlow Logo" />
               <span className="font-display text-lg font-bold tracking-tight text-slate-900 dark:text-white">
                 Auto<span className="text-accent-blue">Flow</span>
               </span>

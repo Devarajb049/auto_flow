@@ -17,14 +17,8 @@ export default function Navbar({ theme, onToggleTheme }) {
       <div className="mx-auto max-w-7xl rounded-full border border-slate-200/50 dark:border-white/10 bg-white/80 dark:bg-slate-card/85 px-6 py-2.5 shadow-lg shadow-slate-100/50 dark:shadow-black/30 backdrop-blur-md transition-all duration-300 flex items-center justify-between">
         
         {/* Brand Logo - AutoFlow */}
-        <a href="#" className="flex items-center gap-2 group">
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-accent-blue text-white shadow-md shadow-accent-blue/20">
-            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="currentColor" />
-              <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </div>
+        <a href="#" className="flex items-center gap-2.5 group">
+          <img src="/logo.svg" className="h-8 w-8 object-contain transition-all duration-300 group-hover:scale-105" alt="AutoFlow Logo" />
           <span className="font-display text-lg font-extrabold tracking-tight text-slate-900 dark:text-white">
             Auto<span className="text-accent-blue">Flow</span>
           </span>
