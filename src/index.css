@@ -5,19 +5,52 @@
 @theme {
   --color-slate-dark: #0b0f19;
   --color-slate-card: #161b26;
-  --color-accent-blue: #3b82f6;
+  --color-accent-blue: #0066ff;
   --color-accent-emerald: #10b981;
   --color-accent-purple: #6366f1;
+  --color-accent-yellow: #facc15;
   --color-text-primary: #f9fafb;
   --color-text-secondary: #9ca3af;
   --font-display: "Outfit", sans-serif;
   --font-body: "Inter", sans-serif;
 }
 
-/* Custom CSS Scrollbar and Base Styles */
+/* Custom Theme-Aware Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+.dark ::-webkit-scrollbar-track {
+  background: var(--color-slate-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 102, 255, 0.25);
+  border-radius: 9999px;
+  border: 3px solid #ffffff;
+  transition: background-color 200ms;
+}
+.dark ::-webkit-scrollbar-thumb {
+  border-color: var(--color-slate-dark);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 102, 255, 0.5);
+}
+
+/* Firefox scrollbar compatibility */
 html {
+  scrollbar-color: rgba(0, 102, 255, 0.25) #ffffff;
+  scrollbar-width: thin;
   scroll-behavior: smooth;
   font-family: var(--font-body);
+  background-color: #ffffff;
+  color: #0e121d;
+  transition: background-color 300ms, color 300ms;
+}
+html.dark {
+  scrollbar-color: rgba(0, 102, 255, 0.25) var(--color-slate-dark);
   background-color: var(--color-slate-dark);
   color: var(--color-text-primary);
 }
@@ -28,41 +61,73 @@ body {
   overflow-x: hidden;
 }
 
-/* Glassmorphism utility */
+/* Custom cursor tracker styling (hidden on touch devices) */
+@media (pointer: fine) {
+  #custom-cursor {
+    display: block;
+  }
+}
+@media (pointer: coarse) {
+  #custom-cursor {
+    display: none;
+  }
+}
+
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.5px solid #0066ff;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate3d(0, 0, 0) translate(-50%, -50%);
+  transition: width 150ms ease, height 150ms ease, border-color 300ms, background-color 150ms;
+}
+
+#custom-cursor.cursor-hover {
+  width: 36px;
+  height: 36px;
+  background-color: rgba(0, 102, 255, 0.12);
+  border-color: #0066ff;
+}
+
+/* Glassmorphism elements */
 .glass-panel {
-  background: rgba(22, 27, 38, 0.7);
+  background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
-.glass-panel-hover:hover {
-  border-color: rgba(59, 130, 246, 0.2);
-  background: rgba(22, 27, 38, 0.8);
-  box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.1);
+.dark .glass-panel {
+  background: rgba(22, 27, 38, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.04);
 }
 
-/* Custom Animations */
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+/* GPU Accelerated Background Orbs */
+@keyframes orb-float-1 {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(40px, -60px) scale(1.1); }
+  66% { transform: translate(-30px, 40px) scale(0.9); }
 }
 
-@keyframes pulse-slow {
-  0%, 100% { opacity: 0.2; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(1.1); }
+@keyframes orb-float-2 {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  50% { transform: translate(-60px, 50px) scale(1.15); }
 }
 
-.animate-float {
-  animation: float 4s ease-in-out infinite;
+.animate-orb-1 {
+  animation: orb-float-1 15s ease-in-out infinite;
 }
 
-.animate-pulse-slow {
-  animation: pulse-slow 8s ease-in-out infinite;
+.animate-orb-2 {
+  animation: orb-float-2 20s ease-in-out infinite;
 }
 
-/* Accordion max-height helper for fluid height transitions */
+/* Accordion helper height transitions */
 .accordion-content {
   max-height: 0;
   opacity: 0;
@@ -71,6 +136,6 @@ body {
 }
 
 .accordion-item.active .accordion-content {
-  max-height: 250px;
+  max-height: 300px;
   opacity: 1;
 }
