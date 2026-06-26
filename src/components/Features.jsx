@@ -44,6 +44,7 @@ const features = [
 ];
 
 export default function Features() {
+  const [activeBentoIndex, setActiveBentoIndex] = useState(0);
   const [activeAccordionIndex, setActiveAccordionIndex] = useState(0);
   const activeBentoIndexRef = useRef(0);
 
@@ -73,13 +74,14 @@ export default function Features() {
 
   const handleBentoHover = (index) => {
     activeBentoIndexRef.current = index;
+    setActiveBentoIndex(index);
   };
 
   return (
     <section id="features" aria-label="Platform Features" className="py-20 md:py-28 bg-white dark:bg-slate-dark text-slate-900 dark:text-white transition-colors duration-300 relative overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16 md:mb-24">
+        <div className="max-w-3xl mb-16 md:mb-24 text-center md:text-left md:mx-0 mx-auto">
           <h2 className="font-display text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl mb-4">
             Built for Extreme Engineering Velocities
           </h2>
@@ -93,10 +95,14 @@ export default function Features() {
           {/* Card 1: Ingestion */}
           <div
             onMouseEnter={() => handleBentoHover(0)}
-            className="col-span-2 row-span-1 glass-panel rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:border-accent-blue/40 dark:hover:border-accent-blue/30 hover:shadow-lg hover:shadow-accent-blue/5 hover:translate-y-[-2px] group cursor-pointer"
+            className={`col-span-2 row-span-1 border rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] group cursor-pointer ${
+              activeBentoIndex === 0
+                ? 'border-accent-blue/50 dark:border-accent-blue/40 shadow-md shadow-accent-blue/5 bg-accent-blue/[0.02] dark:bg-accent-blue/[0.02]'
+                : 'border-slate-200/60 dark:border-white/5 bg-slate-50/50 dark:bg-slate-card/25 hover:border-accent-blue/40 dark:hover:border-accent-blue/30 hover:shadow-accent-blue/5'
+            }`}
           >
             <div className="flex items-start gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent-blue/10 text-accent-blue group-hover:scale-105 transition-all">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent-blue/10 text-accent-blue group-hover:scale-105 transition-all">
                 {features[0].icon("w-6 h-6")}
               </div>
               <div>
@@ -110,10 +116,14 @@ export default function Features() {
           {/* Card 2: Model Tuning */}
           <div
             onMouseEnter={() => handleBentoHover(1)}
-            className="col-span-1 row-span-2 glass-panel rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:border-accent-purple/40 dark:hover:border-accent-purple/30 hover:shadow-lg hover:shadow-accent-purple/5 hover:translate-y-[-2px] group cursor-pointer"
+            className={`col-span-1 row-span-2 border rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] group cursor-pointer ${
+              activeBentoIndex === 1
+                ? 'border-accent-purple/50 dark:border-accent-purple/40 shadow-md shadow-accent-purple/5 bg-accent-purple/[0.02] dark:bg-accent-purple/[0.02]'
+                : 'border-slate-200/60 dark:border-white/5 bg-slate-50/50 dark:bg-slate-card/25 hover:border-accent-purple/40 dark:hover:border-accent-purple/30 hover:shadow-accent-purple/5'
+            }`}
           >
             <div className="flex flex-col gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent-purple/10 text-accent-purple group-hover:scale-105 transition-all">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent-purple/10 text-accent-purple group-hover:scale-105 transition-all">
                 {features[1].icon("w-6 h-6")}
               </div>
               <div>
@@ -127,10 +137,14 @@ export default function Features() {
           {/* Card 3: Security */}
           <div
             onMouseEnter={() => handleBentoHover(2)}
-            className="col-span-1 row-span-1 glass-panel rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:border-accent-emerald/40 dark:hover:border-accent-emerald/30 hover:shadow-lg hover:shadow-accent-emerald/5 hover:translate-y-[-2px] group cursor-pointer"
+            className={`col-span-1 row-span-1 border rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] group cursor-pointer ${
+              activeBentoIndex === 2
+                ? 'border-accent-emerald/50 dark:border-accent-emerald/40 shadow-md shadow-accent-emerald/5 bg-accent-emerald/[0.02] dark:bg-accent-emerald/[0.02]'
+                : 'border-slate-200/60 dark:border-white/5 bg-slate-50/50 dark:bg-slate-card/25 hover:border-accent-emerald/40 dark:hover:border-accent-emerald/30 hover:shadow-accent-emerald/5'
+            }`}
           >
             <div className="flex flex-col gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent-emerald/10 text-accent-emerald group-hover:scale-105 transition-all">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent-emerald/10 text-accent-emerald group-hover:scale-105 transition-all">
                 {features[2].icon("w-6 h-6")}
               </div>
               <div>
@@ -144,10 +158,14 @@ export default function Features() {
           {/* Card 4: Flows */}
           <div
             onMouseEnter={() => handleBentoHover(3)}
-            className="col-span-2 row-span-1 glass-panel rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:border-accent-blue/40 dark:hover:border-accent-blue/30 hover:shadow-lg hover:shadow-accent-blue/5 hover:translate-y-[-2px] group cursor-pointer"
+            className={`col-span-1 row-span-1 border rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] group cursor-pointer ${
+              activeBentoIndex === 3
+                ? 'border-accent-blue/50 dark:border-accent-blue/40 shadow-md shadow-accent-blue/5 bg-accent-blue/[0.02] dark:bg-accent-blue/[0.02]'
+                : 'border-slate-200/60 dark:border-white/5 bg-slate-50/50 dark:bg-slate-card/25 hover:border-accent-blue/40 dark:hover:border-accent-blue/30 hover:shadow-accent-blue/5'
+            }`}
           >
             <div className="flex items-start gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent-blue/10 text-accent-blue group-hover:scale-105 transition-all">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent-blue/10 text-accent-blue group-hover:scale-105 transition-all">
                 {features[3].icon("w-6 h-6")}
               </div>
               <div>
@@ -178,7 +196,7 @@ export default function Features() {
                   className="flex w-full items-center justify-between p-5 text-left"
                 >
                   <div className="flex items-center gap-4">
-                    <div className={`flex h-10 w-10 items-center justify-center rounded-lg bg-slate-200/50 dark:bg-white/5 text-slate-900 dark:text-white ${isActive ? 'text-accent-blue bg-accent-blue/10' : ''}`}>
+                    <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-slate-200/50 dark:bg-white/5 text-slate-900 dark:text-white ${isActive ? 'text-accent-blue bg-accent-blue/10' : ''}`}>
                       {feature.icon("w-5 h-5")}
                     </div>
                     <span className="font-display font-semibold text-slate-900 dark:text-white">{feature.title}</span>

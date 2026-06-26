@@ -20,7 +20,7 @@ export default function Navbar({ theme, onToggleTheme }) {
         <a href="#" className="flex items-center gap-2.5 group">
           <img src="/logo.svg" className="h-8 w-8 object-contain transition-all duration-300 group-hover:scale-105" alt="AutoFlow Logo" />
           <span className="font-display text-lg font-extrabold tracking-tight text-slate-900 dark:text-white">
-            Auto<span className="text-accent-blue">Flow</span>
+            Auto<span className="text-accent-blue group-hover:text-accent-purple transition-colors duration-300">Flow</span>
           </span>
         </a>
 
@@ -33,7 +33,7 @@ export default function Navbar({ theme, onToggleTheme }) {
                 key={link.label}
                 href={link.href}
                 onClick={() => setActiveTab(link.label)}
-                className={`text-xs font-bold px-4 py-2 rounded-full transition-all duration-200 ${
+                className={`text-xs font-bold px-4 py-2 rounded-full transition-all duration-300 hover:scale-105 ${
                   isActive
                     ? 'bg-accent-blue text-white shadow-sm shadow-accent-blue/15'
                     : 'text-text-secondary hover:text-accent-blue dark:text-slate-300 dark:hover:text-white'
@@ -52,7 +52,7 @@ export default function Navbar({ theme, onToggleTheme }) {
             type="button"
             onClick={onToggleTheme}
             aria-label="Toggle Theme"
-            className="flex h-8 w-14 items-center rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/5 p-1 cursor-pointer transition-all duration-300 relative"
+            className="flex h-8 w-14 items-center rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/5 p-1 cursor-pointer hover:scale-105 active:scale-95 transition-all duration-300 relative"
           >
             {/* Sliding Dot */}
             <div className={`absolute top-[3px] h-5 w-5 rounded-full bg-white dark:bg-accent-blue shadow flex items-center justify-center transition-all duration-300 ${theme === 'dark' ? 'translate-x-6' : 'translate-x-0'}`}>
@@ -71,7 +71,7 @@ export default function Navbar({ theme, onToggleTheme }) {
           {/* Black CTA Pill (hidden on small mobile) */}
           <a
             href="#pricing"
-            className="hidden sm:inline-flex h-9 items-center justify-center rounded-full bg-slate-950 dark:bg-white px-5 text-xs font-bold text-white dark:text-slate-950 hover:bg-slate-800 dark:hover:bg-slate-100 transition-all duration-200 shadow-sm"
+            className="hidden sm:inline-flex h-9 items-center justify-center rounded-full bg-slate-950 dark:bg-white px-5 text-xs font-bold text-white dark:text-slate-950 hover:bg-slate-800 dark:hover:bg-slate-100 hover:scale-105 hover:-translate-y-0.5 active:scale-95 transition-all duration-300 shadow-sm"
           >
             Get Started
           </a>
@@ -99,7 +99,7 @@ export default function Navbar({ theme, onToggleTheme }) {
 
       {/* Mobile nav dropdown */}
       {isOpen && (
-        <div className="md:hidden mt-2 rounded-2xl border border-slate-200/50 dark:border-white/10 bg-white/95 dark:bg-slate-dark/95 backdrop-blur-xl px-6 py-6 transition-all duration-300 ease-in-out shadow-lg">
+        <div className="md:hidden mt-2 rounded-2xl border border-slate-200/50 dark:border-white/10 bg-white/95 dark:bg-slate-dark/95 backdrop-blur-xl px-6 py-6 transition-all duration-300 ease-in-out shadow-lg animate-slide-down">
           <nav aria-label="Mobile Navigation" className="flex flex-col gap-2">
             {navLinks.map((link) => (
               <a

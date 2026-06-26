@@ -40,7 +40,7 @@ export default function Testimonials() {
           {reviews.map((review, index) => (
             <article
               key={index}
-              className="glass-panel rounded-2xl p-8 flex flex-col justify-between hover:border-slate-300 dark:hover:border-white/10 transition-all duration-300 shadow-sm"
+              className="glass-panel rounded-2xl p-8 flex flex-col justify-between hover:border-accent-emerald/35 dark:hover:border-accent-emerald/25 hover:shadow-md hover:shadow-accent-emerald/5 hover:-translate-y-1.5 transition-all duration-300 shadow-sm cursor-pointer group"
             >
               <div>
                 {/* Stars */}
@@ -59,7 +59,7 @@ export default function Testimonials() {
               
               {/* Author details */}
               <div className="flex items-center gap-4 border-t border-slate-200 dark:border-white/5 pt-6">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent-blue/10 text-accent-blue font-display font-bold">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-tr from-accent-blue to-accent-purple text-white shadow-sm font-display font-bold text-sm">
                   {review.author[0]}
                 </div>
                 <div>

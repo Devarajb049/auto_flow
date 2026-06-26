@@ -38,13 +38,17 @@ export default function App() {
 
   // Cursor follower mouse listener (direct DOM style update for peak performance)
   useEffect(() => {
-    const cursor = document.getElementById('custom-cursor');
-    if (!cursor) return;
+    const cursor = document.getElementById('custom-cursor-container');
+    const ring = document.getElementById('custom-cursor-ring');
+    const dot = document.getElementById('custom-cursor-dot');
+    if (!cursor || !ring || !dot) return;
 
     let mouseX = 0;
     let mouseY = 0;
-    let currentX = 0;
-    let currentY = 0;
+    let ringX = 0;
+    let ringY = 0;
+    let dotX = 0;
+    let dotY = 0;
 
     const handleMouseMove = (e) => {
       mouseX = e.clientX;
@@ -74,14 +78,29 @@ export default function App() {
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('mouseover', handleMouseOver);
 
+    let hasMoved = false;
     let animationFrameId;
     const tick = () => {
-      const dx = mouseX - currentX;
-      const dy = mouseY - currentY;
-      currentX += dx * 0.15;
-      currentY += dy * 0.15;
+      if (!hasMoved && mouseX !== 0 && mouseY !== 0) {
+        ringX = mouseX;
+        ringY = mouseY;
+        dotX = mouseX;
+        dotY = mouseY;
+        hasMoved = true;
+      }
 
-      cursor.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) translate(-50%, -50%)`;
+      const dxRing = mouseX - ringX;
+      const dyRing = mouseY - ringY;
+      ringX += dxRing * 0.12;
+      ringY += dyRing * 0.12;
+
+      const dxDot = mouseX - dotX;
+      const dyDot = mouseY - dotY;
+      dotX += dxDot * 0.35;
+      dotY += dyDot * 0.35;
+
+      ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate(-50%, -50%)`;
+      dot.style.transform = `translate3d(${dotX}px, ${dotY}px, 0) translate(-50%, -50%)`;
 
       animationFrameId = requestAnimationFrame(tick);
     };
@@ -112,7 +131,10 @@ export default function App() {
       </div>
 
       {/* Custom Cursor follower */}
-      <div id="custom-cursor" className="hidden md:block" />
+      <div id="custom-cursor-container" className="hidden md:block">
+        <div id="custom-cursor-ring" />
+        <div id="custom-cursor-dot" />
+      </div>
 
       {/* Navigation Header */}
       <Navbar theme={theme} onToggleTheme={toggleTheme} />
