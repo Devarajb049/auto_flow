@@ -17,27 +17,27 @@
   --font-body: "Inter", sans-serif;
 }
 
-/* Custom Theme-Aware Scrollbar - Targeted to html to prevent double scrollbars */
-html::-webkit-scrollbar {
+/* Custom Theme-Aware Scrollbar */
+::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
-html::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background: #ffffff;
 }
-.dark html::-webkit-scrollbar-track {
+.dark ::-webkit-scrollbar-track {
   background: var(--color-slate-dark);
 }
-html::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background: rgba(0, 102, 255, 0.25);
   border-radius: 9999px;
   border: 3px solid #ffffff;
   transition: background-color 200ms;
 }
-.dark html::-webkit-scrollbar-thumb {
+.dark ::-webkit-scrollbar-thumb {
   border-color: var(--color-slate-dark);
 }
-html::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 102, 255, 0.5);
 }
 
@@ -60,7 +60,6 @@ html.dark {
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 /* Custom cursor tracker styling (hidden on touch devices) */
