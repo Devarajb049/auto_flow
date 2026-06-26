@@ -12,7 +12,7 @@ export default function Navbar({ theme, onToggleTheme }) {
   ];
 
   return (
-    <header className="sticky top-4 z-50 w-full px-6 lg:px-8">
+    <header className="fixed top-4 left-0 right-0 z-50 px-6 lg:px-8">
       {/* Floating Pill Container */}
       <div className="mx-auto max-w-7xl rounded-full border border-slate-200/50 dark:border-white/10 bg-white/80 dark:bg-slate-card/85 px-6 py-2.5 shadow-lg shadow-slate-100/50 dark:shadow-black/30 backdrop-blur-md transition-all duration-300 flex items-center justify-between">
         

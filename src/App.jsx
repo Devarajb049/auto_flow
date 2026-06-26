@@ -11,10 +11,19 @@ import CTA from './components/CTA';
 import Footer from './components/Footer';
 
 export default function App() {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('autoflow-theme') || 'light';
+    }
+    return 'light';
+  });
 
   const toggleTheme = () => {
-    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
+    setTheme((prev) => {
+      const next = prev === 'light' ? 'dark' : 'light';
+      localStorage.setItem('autoflow-theme', next);
+      return next;
+    });
   };
 
   // Sync theme class with the document HTML element for global Tailwind variant scoping
