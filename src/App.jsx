@@ -98,9 +98,17 @@ export default function App() {
   return (
     <div className={`relative min-h-screen bg-white dark:bg-slate-dark text-slate-900 dark:text-text-primary transition-colors duration-300 selection:bg-accent-blue/30 selection:text-white overflow-x-hidden ${theme}`}>
       {/* Animated Background Orbs */}
-      <div className="absolute top-0 left-0 right-0 h-[1000px] pointer-events-none overflow-hidden -z-10">
-        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-accent-blue/5 dark:bg-accent-blue/10 blur-[120px] animate-orb-1"></div>
-        <div className="absolute top-[20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-accent-purple/5 dark:bg-accent-purple/10 blur-[120px] animate-orb-2"></div>
+      <div className="absolute top-0 left-0 right-0 bottom-0 pointer-events-none overflow-hidden -z-10">
+        {/* Top Section Orbs */}
+        <div className="absolute top-[-100px] left-[-100px] w-[500px] h-[500px] rounded-full bg-accent-blue/5 dark:bg-accent-blue/10 blur-[120px] animate-orb-1"></div>
+        <div className="absolute top-[400px] right-[-100px] w-[500px] h-[500px] rounded-full bg-accent-purple/5 dark:bg-accent-purple/10 blur-[120px] animate-orb-2"></div>
+        
+        {/* Middle Section Orbs (Features/Pricing) */}
+        <div className="absolute top-[1500px] left-[-150px] w-[600px] h-[600px] rounded-full bg-accent-emerald/5 dark:bg-accent-emerald/5 blur-[130px] animate-orb-1"></div>
+        <div className="absolute top-[2600px] right-[-150px] w-[600px] h-[600px] rounded-full bg-accent-blue/5 dark:bg-accent-blue/10 blur-[130px] animate-orb-2"></div>
+
+        {/* Bottom Section Orbs (FAQ/CTA) */}
+        <div className="absolute bottom-[200px] left-[10%] w-[500px] h-[500px] rounded-full bg-accent-purple/5 dark:bg-accent-purple/5 blur-[120px] animate-orb-1"></div>
       </div>
 
       {/* Custom Cursor follower */}

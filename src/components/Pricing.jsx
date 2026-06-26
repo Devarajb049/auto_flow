@@ -208,7 +208,7 @@ export default function Pricing() {
         {/* Pricing Matrix Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
           {/* Card 1: Starter */}
-          <article className="bg-slate-50/50 dark:bg-slate-card/50 border border-slate-200/60 dark:border-white/5 rounded-2xl p-8 flex flex-col justify-between hover:border-slate-300 dark:hover:border-white/10 transition-all duration-300 shadow-sm">
+          <article className="glass-panel rounded-2xl p-8 flex flex-col justify-between hover:border-slate-300 dark:hover:border-white/10 transition-all duration-300 shadow-sm">
             <div>
               <div className="flex justify-between items-center mb-4">
                 <h3 className="font-display text-xl font-bold text-slate-900 dark:text-white">Starter</h3>
@@ -251,7 +251,7 @@ export default function Pricing() {
           </article>
 
           {/* Card 2: Pro */}
-          <article className="bg-slate-50/50 dark:bg-slate-card/80 border-accent-blue/30 dark:border-accent-blue/30 rounded-2xl p-8 flex flex-col justify-between hover:border-accent-blue/40 shadow-xl shadow-accent-blue/5 relative overflow-hidden transition-all duration-300">
+          <article className="glass-panel border-accent-blue/30 dark:border-accent-blue/40 rounded-2xl p-8 flex flex-col justify-between hover:border-accent-blue/40 shadow-xl shadow-accent-blue/5 relative overflow-hidden transition-all duration-300">
             <div className="absolute top-0 right-0 px-3 py-1 bg-accent-blue text-[9px] font-bold text-white rounded-bl-lg uppercase tracking-wider">
               Most Popular
             </div>
@@ -301,7 +301,7 @@ export default function Pricing() {
           </article>
 
           {/* Card 3: Enterprise */}
-          <article className="bg-slate-50/50 dark:bg-slate-card/50 border border-slate-200/60 dark:border-white/5 rounded-2xl p-8 flex flex-col justify-between hover:border-slate-300 dark:hover:border-white/10 transition-all duration-300 shadow-sm">
+          <article className="glass-panel rounded-2xl p-8 flex flex-col justify-between hover:border-slate-300 dark:hover:border-white/10 transition-all duration-300 shadow-sm">
             <div>
               <div className="flex justify-between items-center mb-4">
                 <h3 className="font-display text-xl font-bold text-slate-900 dark:text-white">Enterprise</h3>

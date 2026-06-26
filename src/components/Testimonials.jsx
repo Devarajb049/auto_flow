@@ -40,7 +40,7 @@ export default function Testimonials() {
           {reviews.map((review, index) => (
             <article
               key={index}
-              className="bg-slate-50/50 dark:bg-slate-card/50 border border-slate-200/60 dark:border-white/5 rounded-2xl p-8 flex flex-col justify-between hover:border-slate-300 dark:hover:border-white/10 transition-all duration-300 shadow-sm"
+              className="glass-panel rounded-2xl p-8 flex flex-col justify-between hover:border-slate-300 dark:hover:border-white/10 transition-all duration-300 shadow-sm"
             >
               <div>
                 {/* Stars */}

@@ -42,7 +42,7 @@ export default function FAQ() {
             return (
               <div
                 key={index}
-                className={`rounded-xl border border-slate-200 dark:border-white/5 bg-slate-50/50 dark:bg-slate-card/30 transition-all duration-300 ${isOpen ? 'border-accent-blue/30 dark:border-accent-blue/20 bg-slate-100/50 dark:bg-slate-card/55' : ''}`}
+                className={`rounded-xl glass-panel transition-all duration-300 ${isOpen ? 'border-accent-blue/30 dark:border-accent-blue/20 bg-slate-100/50 dark:bg-slate-card/55' : ''}`}
               >
                 {/* Accordion Trigger */}
                 <button

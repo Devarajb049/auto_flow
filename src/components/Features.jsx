@@ -93,7 +93,7 @@ export default function Features() {
           {/* Card 1: Ingestion */}
           <div
             onMouseEnter={() => handleBentoHover(0)}
-            className="col-span-2 row-span-1 bg-slate-50/50 dark:bg-slate-card/50 border border-slate-200/60 dark:border-white/5 rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:border-accent-blue/40 dark:hover:border-accent-blue/30 hover:shadow-lg hover:shadow-accent-blue/5 hover:translate-y-[-2px] group cursor-pointer"
+            className="col-span-2 row-span-1 glass-panel rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:border-accent-blue/40 dark:hover:border-accent-blue/30 hover:shadow-lg hover:shadow-accent-blue/5 hover:translate-y-[-2px] group cursor-pointer"
           >
             <div className="flex items-start gap-4">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent-blue/10 text-accent-blue group-hover:scale-105 transition-all">
@@ -110,7 +110,7 @@ export default function Features() {
           {/* Card 2: Model Tuning */}
           <div
             onMouseEnter={() => handleBentoHover(1)}
-            className="col-span-1 row-span-2 bg-slate-50/50 dark:bg-slate-card/50 border border-slate-200/60 dark:border-white/5 rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:border-accent-purple/40 dark:hover:border-accent-purple/30 hover:shadow-lg hover:shadow-accent-purple/5 hover:translate-y-[-2px] group cursor-pointer"
+            className="col-span-1 row-span-2 glass-panel rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:border-accent-purple/40 dark:hover:border-accent-purple/30 hover:shadow-lg hover:shadow-accent-purple/5 hover:translate-y-[-2px] group cursor-pointer"
           >
             <div className="flex flex-col gap-4">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent-purple/10 text-accent-purple group-hover:scale-105 transition-all">
@@ -127,7 +127,7 @@ export default function Features() {
           {/* Card 3: Security */}
           <div
             onMouseEnter={() => handleBentoHover(2)}
-            className="col-span-1 row-span-1 bg-slate-50/50 dark:bg-slate-card/50 border border-slate-200/60 dark:border-white/5 rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:border-accent-emerald/40 dark:hover:border-accent-emerald/30 hover:shadow-lg hover:shadow-accent-emerald/5 hover:translate-y-[-2px] group cursor-pointer"
+            className="col-span-1 row-span-1 glass-panel rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:border-accent-emerald/40 dark:hover:border-accent-emerald/30 hover:shadow-lg hover:shadow-accent-emerald/5 hover:translate-y-[-2px] group cursor-pointer"
           >
             <div className="flex flex-col gap-4">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent-emerald/10 text-accent-emerald group-hover:scale-105 transition-all">
@@ -144,7 +144,7 @@ export default function Features() {
           {/* Card 4: Flows */}
           <div
             onMouseEnter={() => handleBentoHover(3)}
-            className="col-span-2 row-span-1 bg-slate-50/50 dark:bg-slate-card/50 border border-slate-200/60 dark:border-white/5 rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:border-accent-blue/40 dark:hover:border-accent-blue/30 hover:shadow-lg hover:shadow-accent-blue/5 hover:translate-y-[-2px] group cursor-pointer"
+            className="col-span-2 row-span-1 glass-panel rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:border-accent-blue/40 dark:hover:border-accent-blue/30 hover:shadow-lg hover:shadow-accent-blue/5 hover:translate-y-[-2px] group cursor-pointer"
           >
             <div className="flex items-start gap-4">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent-blue/10 text-accent-blue group-hover:scale-105 transition-all">
@@ -166,7 +166,7 @@ export default function Features() {
             return (
               <div
                 key={index}
-                className={`accordion-item rounded-xl border border-slate-200 dark:border-white/5 bg-slate-50/50 dark:bg-slate-card/40 transition-all duration-300 ${isActive ? 'active border-accent-blue/30 dark:border-accent-blue/20 bg-slate-100 dark:bg-slate-card/60' : ''}`}
+                className={`accordion-item rounded-xl glass-panel transition-all duration-300 ${isActive ? 'active border-accent-blue/30 dark:border-accent-blue/20 bg-slate-100/50 dark:bg-slate-card/60' : ''}`}
               >
                 {/* Header */}
                 <button
