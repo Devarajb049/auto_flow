@@ -63,7 +63,7 @@ export default function Hero() {
 
             {/* Tilted Dashboard Wrapper */}
             <div className="w-full max-w-2xl [perspective:1000px] animate-fade-in animation-delay-400">
-              <div className="w-full rounded-2xl border border-slate-200/50 dark:border-white/10 bg-slate-50/20 dark:bg-slate-card/25 p-2 shadow-2xl backdrop-blur-sm transition-all duration-500 hover:border-accent-blue/40 hover:shadow-[0_20px_50px_rgba(0,102,255,0.15)] dark:hover:shadow-[0_20px_50px_rgba(0,102,255,0.3)] lg:hover:[transform:rotateX(0deg)_rotateY(0deg)_skewY(0deg)] lg:[transform:rotateX(6deg)_rotateY(-10deg)_skewY(2deg)] hover:scale-[1.02] group">
+              <div className="w-full rounded-2xl border border-slate-200/50 dark:border-white/10 bg-slate-50/20 dark:bg-slate-card/25 p-2 shadow-2xl backdrop-blur-sm transition-all duration-500 hover:border-accent-blue/40 hover:shadow-[0_20px_50px_rgba(0,102,255,0.15)] dark:hover:shadow-[0_20px_50px_rgba(0,102,255,0.3)] lg:hover:[transform:rotateX(0deg)_rotateY(0deg)_skewY(0deg)] lg:[transform:rotateX(6deg)_rotateY(-10deg)_skewY(2deg)] hover:scale-[1.02] aurora-card group">
                 <div className="rounded-xl overflow-hidden border border-slate-200/60 dark:border-white/5 bg-white dark:bg-slate-dark/95 shadow-inner aspect-[16/9.5] flex flex-col">
                   {/* Mock Header */}
                   <div className="flex items-center justify-between px-4 py-3 border-b border-slate-200 dark:border-white/5 bg-slate-50 dark:bg-slate-card/30">
@@ -96,7 +96,7 @@ export default function Hero() {
                       {/* Node Graph Mock */}
                       <div className="flex-1 p-4 flex items-center justify-center relative overflow-hidden">
                         <div className="grid grid-cols-3 gap-3 sm:gap-4 w-full max-w-lg relative z-10">
-                          <div className="bg-white dark:bg-slate-card border border-slate-200/80 dark:border-white/10 p-2.5 sm:p-3 rounded-lg shadow-sm hover:scale-105 hover:-translate-y-0.5 hover:border-accent-blue/40 hover:shadow-md hover:shadow-accent-blue/5 transition-all duration-300 cursor-pointer">
+                          <div className="bg-white dark:bg-slate-card border border-slate-200/80 dark:border-white/10 p-2.5 sm:p-3 aurora-card rounded-lg shadow-sm hover:scale-105 hover:-translate-y-0.5 hover:border-accent-blue/40 hover:shadow-md hover:shadow-accent-blue/5 transition-all duration-300 cursor-pointer">
                             <div className="flex justify-between items-center mb-1">
                               <span className="text-[8px] font-bold text-accent-blue uppercase tracking-wider">Source</span>
                               <span className="h-1.5 w-1.5 rounded-full bg-accent-emerald animate-pulse"></span>
@@ -104,14 +104,14 @@ export default function Hero() {
                             <div className="font-bold text-[9px] sm:text-[10px] mb-0.5 text-slate-800 dark:text-slate-200">Webhook Ingestion</div>
                             <div className="text-[7px] sm:text-[8px] text-text-secondary">stripe.charge_succeeded</div>
                           </div>
-                          <div className="bg-white dark:bg-slate-card border border-slate-200/80 dark:border-white/10 p-2.5 sm:p-3 rounded-lg shadow-sm hover:scale-105 hover:-translate-y-0.5 hover:border-accent-purple/40 hover:shadow-md hover:shadow-accent-purple/5 transition-all duration-300 cursor-pointer">
+                          <div className="bg-white dark:bg-slate-card border border-slate-200/80 dark:border-white/10 p-2.5 sm:p-3 aurora-card rounded-lg shadow-sm hover:scale-105 hover:-translate-y-0.5 hover:border-accent-purple/40 hover:shadow-md hover:shadow-accent-purple/5 transition-all duration-300 cursor-pointer">
                             <div className="flex justify-between items-center mb-1">
                               <span className="text-[8px] font-bold text-accent-purple uppercase tracking-wider">Process</span>
                             </div>
                             <div className="font-bold text-[9px] sm:text-[10px] mb-0.5 text-slate-800 dark:text-slate-200">AI Classification</div>
                             <div className="text-[7px] sm:text-[8px] text-text-secondary">Tune LLaMA 3 weights</div>
                           </div>
-                          <div className="bg-white dark:bg-slate-card border border-slate-200/80 dark:border-white/10 p-2.5 sm:p-3 rounded-lg shadow-sm hover:scale-105 hover:-translate-y-0.5 hover:border-accent-emerald/40 hover:shadow-md hover:shadow-accent-emerald/5 transition-all duration-300 cursor-pointer">
+                          <div className="bg-white dark:bg-slate-card border border-slate-200/80 dark:border-white/10 p-2.5 sm:p-3 aurora-card rounded-lg shadow-sm hover:scale-105 hover:-translate-y-0.5 hover:border-accent-emerald/40 hover:shadow-md hover:shadow-accent-emerald/5 transition-all duration-300 cursor-pointer">
                             <div className="flex justify-between items-center mb-1">
                               <span className="text-[8px] font-bold text-accent-emerald uppercase tracking-wider">Action</span>
                             </div>

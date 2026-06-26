@@ -157,7 +157,20 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-/* GPU Accelerated Background Orbs */
+/* Theme Variables for Ambient Background Orbs */
+:root {
+  --orb-color-blue: rgba(0, 102, 255, 0.05);
+  --orb-color-purple: rgba(99, 102, 241, 0.05);
+  --orb-color-emerald: rgba(16, 185, 129, 0.05);
+}
+
+.dark {
+  --orb-color-blue: rgba(0, 102, 255, 0.12);
+  --orb-color-purple: rgba(99, 102, 241, 0.12);
+  --orb-color-emerald: rgba(16, 185, 129, 0.12);
+}
+
+/* GPU Accelerated Background Orbs - Floating */
 @keyframes orb-float-1 {
   0%, 100% { transform: translate(0px, 0px) scale(1); }
   33% { transform: translate(40px, -60px) scale(1.1); }
@@ -169,12 +182,85 @@ body {
   50% { transform: translate(-60px, 50px) scale(1.15); }
 }
 
+/* GPU Accelerated Background Orbs - Color Shifting */
+@keyframes orb-color-1 {
+  0%, 100% { background-color: var(--orb-color-blue); }
+  33% { background-color: var(--orb-color-purple); }
+  66% { background-color: var(--orb-color-emerald); }
+}
+
+@keyframes orb-color-2 {
+  0%, 100% { background-color: var(--orb-color-purple); }
+  33% { background-color: var(--orb-color-emerald); }
+  66% { background-color: var(--orb-color-blue); }
+}
+
 .animate-orb-1 {
-  animation: orb-float-1 15s ease-in-out infinite;
+  animation: orb-float-1 15s ease-in-out infinite, orb-color-1 25s ease-in-out infinite;
 }
 
 .animate-orb-2 {
-  animation: orb-float-2 20s ease-in-out infinite;
+  animation: orb-float-2 20s ease-in-out infinite, orb-color-2 30s ease-in-out infinite;
+}
+
+/* Aurora Glow Card Animation */
+@keyframes aurora-glow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.aurora-card {
+  position: relative;
+  overflow: hidden;
+  transition: border-color 200ms ease-out, box-shadow 200ms ease-out, transform 200ms ease-out;
+}
+
+.aurora-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    115deg,
+    rgba(0, 102, 255, 0.04),
+    rgba(99, 102, 241, 0.04),
+    rgba(16, 185, 129, 0.04),
+    rgba(0, 102, 255, 0.04)
+  );
+  background-size: 200% 200%;
+  opacity: 0;
+  transition: opacity 200ms ease-out;
+  z-index: 0;
+  pointer-events: none;
+  animation: aurora-glow 12s linear infinite;
+}
+
+.dark .aurora-card::before {
+  background: linear-gradient(
+    115deg,
+    rgba(0, 102, 255, 0.09),
+    rgba(99, 102, 241, 0.09),
+    rgba(16, 185, 129, 0.09),
+    rgba(0, 102, 255, 0.09)
+  );
+  background-size: 200% 200%;
+}
+
+.aurora-card:hover::before {
+  opacity: 1;
+}
+
+/* Ensure card content stays on top of the background pseudo-element */
+.aurora-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* Accordion helper height transitions */

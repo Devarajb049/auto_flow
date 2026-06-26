@@ -40,7 +40,7 @@ export default function Testimonials() {
           {reviews.map((review, index) => (
             <article
               key={index}
-              className="glass-panel rounded-2xl p-8 flex flex-col justify-between hover:border-accent-emerald/35 dark:hover:border-accent-emerald/25 hover:shadow-md hover:shadow-accent-emerald/5 hover:-translate-y-1.5 transition-all duration-300 shadow-sm cursor-pointer group"
+              className="glass-panel aurora-card rounded-2xl p-8 flex flex-col justify-between hover:border-accent-emerald/35 dark:hover:border-accent-emerald/25 hover:shadow-md hover:shadow-accent-emerald/5 hover:-translate-y-1.5 transition-all duration-300 shadow-sm cursor-pointer group"
             >
               <div>
                 {/* Stars */}

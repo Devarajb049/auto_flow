@@ -317,7 +317,7 @@ export default function Pricing() {
         {/* Pricing Matrix Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
           {/* Card 1: Starter */}
-          <article className="glass-panel rounded-2xl p-8 flex flex-col justify-between hover:border-accent-blue/30 dark:hover:border-accent-blue/20 hover:shadow-md hover:-translate-y-1.5 transition-all duration-300 shadow-sm cursor-pointer group">
+          <article className="glass-panel aurora-card rounded-2xl p-8 flex flex-col justify-between hover:border-accent-blue/30 dark:hover:border-accent-blue/20 hover:shadow-md hover:-translate-y-1.5 transition-all duration-300 shadow-sm cursor-pointer group">
             <div>
               <div className="flex justify-between items-center mb-4">
                 <h3 className="font-display text-xl font-bold text-slate-900 dark:text-white">Starter</h3>
@@ -360,8 +360,9 @@ export default function Pricing() {
           </article>
 
           {/* Card 2: Pro */}
-          <article className="glass-panel border-accent-blue/30 dark:border-accent-blue/45 rounded-2xl p-8 flex flex-col justify-between hover:border-accent-blue/55 hover:shadow-2xl hover:shadow-accent-blue/10 hover:-translate-y-2 relative overflow-hidden transition-all duration-300 cursor-pointer group">
-            <div className="absolute top-0 right-0 px-3 py-1 bg-accent-blue text-[9px] font-bold text-white rounded-bl-lg uppercase tracking-wider">
+          <article className="glass-panel aurora-card border-accent-blue/45 dark:border-accent-blue/50 bg-gradient-to-b from-accent-blue/[0.02] to-transparent dark:from-accent-blue/[0.04] dark:to-slate-card/20 rounded-2xl p-8 flex flex-col justify-between shadow-lg shadow-accent-blue/5 dark:shadow-accent-blue/[0.03] hover:border-accent-blue/70 dark:hover:border-accent-blue/60 hover:shadow-2xl hover:shadow-accent-blue/15 dark:hover:shadow-accent-blue/20 hover:-translate-y-2 relative overflow-visible transition-all duration-300 cursor-pointer group">
+            {/* Centered Floating Popular Badge */}
+            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-accent-blue to-accent-purple text-[9px] font-bold text-white rounded-full uppercase tracking-widest shadow-md shadow-accent-blue/20 border border-white/10 dark:border-white/5 z-20 whitespace-nowrap">
               Most Popular
             </div>
             <div>
@@ -410,7 +411,7 @@ export default function Pricing() {
           </article>
 
           {/* Card 3: Enterprise */}
-          <article className="glass-panel rounded-2xl p-8 flex flex-col justify-between hover:border-accent-blue/30 dark:hover:border-accent-blue/20 hover:shadow-md hover:-translate-y-1.5 transition-all duration-300 shadow-sm cursor-pointer group">
+          <article className="glass-panel aurora-card rounded-2xl p-8 flex flex-col justify-between hover:border-accent-blue/30 dark:hover:border-accent-blue/20 hover:shadow-md hover:-translate-y-1.5 transition-all duration-300 shadow-sm cursor-pointer group">
             <div>
               <div className="flex justify-between items-center mb-4">
                 <h3 className="font-display text-xl font-bold text-slate-900 dark:text-white">Enterprise</h3>

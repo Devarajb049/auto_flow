@@ -95,7 +95,7 @@ export default function Features() {
           {/* Card 1: Ingestion */}
           <div
             onMouseEnter={() => handleBentoHover(0)}
-            className={`col-span-2 row-span-1 border rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] group cursor-pointer ${
+            className={`col-span-2 row-span-1 border aurora-card rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] group cursor-pointer ${
               activeBentoIndex === 0
                 ? 'border-accent-blue/50 dark:border-accent-blue/40 shadow-md shadow-accent-blue/5 bg-accent-blue/[0.02] dark:bg-accent-blue/[0.02]'
                 : 'border-slate-200/60 dark:border-white/5 bg-slate-50/50 dark:bg-slate-card/25 hover:border-accent-blue/40 dark:hover:border-accent-blue/30 hover:shadow-accent-blue/5'
@@ -116,7 +116,7 @@ export default function Features() {
           {/* Card 2: Model Tuning */}
           <div
             onMouseEnter={() => handleBentoHover(1)}
-            className={`col-span-1 row-span-2 border rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] group cursor-pointer ${
+            className={`col-span-1 row-span-2 border aurora-card rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] group cursor-pointer ${
               activeBentoIndex === 1
                 ? 'border-accent-purple/50 dark:border-accent-purple/40 shadow-md shadow-accent-purple/5 bg-accent-purple/[0.02] dark:bg-accent-purple/[0.02]'
                 : 'border-slate-200/60 dark:border-white/5 bg-slate-50/50 dark:bg-slate-card/25 hover:border-accent-purple/40 dark:hover:border-accent-purple/30 hover:shadow-accent-purple/5'
@@ -137,7 +137,7 @@ export default function Features() {
           {/* Card 3: Security */}
           <div
             onMouseEnter={() => handleBentoHover(2)}
-            className={`col-span-1 row-span-1 border rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] group cursor-pointer ${
+            className={`col-span-1 row-span-1 border aurora-card rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] group cursor-pointer ${
               activeBentoIndex === 2
                 ? 'border-accent-emerald/50 dark:border-accent-emerald/40 shadow-md shadow-accent-emerald/5 bg-accent-emerald/[0.02] dark:bg-accent-emerald/[0.02]'
                 : 'border-slate-200/60 dark:border-white/5 bg-slate-50/50 dark:bg-slate-card/25 hover:border-accent-emerald/40 dark:hover:border-accent-emerald/30 hover:shadow-accent-emerald/5'
@@ -158,7 +158,7 @@ export default function Features() {
           {/* Card 4: Flows */}
           <div
             onMouseEnter={() => handleBentoHover(3)}
-            className={`col-span-1 row-span-1 border rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] group cursor-pointer ${
+            className={`col-span-1 row-span-1 border aurora-card rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px] group cursor-pointer ${
               activeBentoIndex === 3
                 ? 'border-accent-blue/50 dark:border-accent-blue/40 shadow-md shadow-accent-blue/5 bg-accent-blue/[0.02] dark:bg-accent-blue/[0.02]'
                 : 'border-slate-200/60 dark:border-white/5 bg-slate-50/50 dark:bg-slate-card/25 hover:border-accent-blue/40 dark:hover:border-accent-blue/30 hover:shadow-accent-blue/5'

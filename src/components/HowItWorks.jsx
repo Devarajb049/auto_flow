@@ -83,10 +83,11 @@ export default function HowItWorks() {
             
             {/* Active Flowing Line */}
             <div 
-              className={`absolute inset-0 overflow-hidden rounded-full ${
-                isReset ? 'transition-none' : 'transition-all duration-700 ease-in-out'
-              }`}
-              style={{ clipPath: `inset(0 0 ${100 - activeStep * 50}% 0)` }}
+              className="absolute inset-0 overflow-hidden rounded-full"
+              style={{
+                clipPath: `inset(0 0 ${100 - activeStep * 50}% 0)`,
+                transition: isReset ? 'none' : 'clip-path 350ms ease-in-out'
+              }}
             >
               <svg className="w-full h-full overflow-visible" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <line x1="50%" y1="0" x2="50%" y2="100%" stroke="url(#stepper-gradient-vertical)" strokeWidth="8" className="opacity-40 blur-[4px]" />
@@ -125,6 +126,11 @@ export default function HowItWorks() {
                     setActiveStep(index);
                     setIsHovered(true);
                   }}
+                  onMouseEnter={() => {
+                    setActiveStep(index);
+                    setIsHovered(true);
+                  }}
+                  onMouseLeave={() => setIsHovered(false)}
                   className={`absolute left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full border flex items-center justify-center font-display text-xs font-bold transition-all duration-500 pointer-events-auto focus:outline-none cursor-pointer ${nodeColorClass}`}
                   style={{ top: `${index * 50}%` }}
                   title={`Go to Step ${step.number}: ${step.title}`}
@@ -139,22 +145,7 @@ export default function HowItWorks() {
               );
             })}
 
-            {/* Glowing Flow Leader Pulse Dot */}
-            <div 
-              className={`absolute left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full flex items-center justify-center z-30 ${
-                isReset ? 'transition-none' : 'transition-all duration-700 ease-in-out'
-              }`}
-              style={{ top: `${activeStep * 50}%` }}
-            >
-              {/* Pulsing Outer Aura */}
-              <span className={`absolute w-6 h-6 rounded-full opacity-30 animate-pulse ${
-                activeStep === 0 ? 'bg-accent-blue' : activeStep === 1 ? 'bg-accent-purple' : 'bg-accent-emerald'
-              }`} />
-              {/* Inner Glowing Core */}
-              <span className={`w-2.5 h-2.5 rounded-full shadow-[0_0_12px_rgba(255,255,255,0.8)] ${
-                activeStep === 0 ? 'bg-accent-blue shadow-accent-blue/60' : activeStep === 1 ? 'bg-accent-purple shadow-accent-purple/60' : 'bg-accent-emerald shadow-accent-emerald/60'
-              }`} />
-            </div>
+
           </div>
 
           {/* Alternating Timeline Rows */}
@@ -175,7 +166,7 @@ export default function HowItWorks() {
                           setIsHovered(true);
                         }}
                         onMouseLeave={() => setIsHovered(false)}
-                        className={`w-full bg-white dark:bg-slate-card border rounded-2xl p-8 flex flex-col justify-between hover:shadow-md hover:-translate-y-1.5 shadow-sm transition-all duration-300 group cursor-pointer ${
+                        className={`w-full bg-white dark:bg-slate-card border aurora-card rounded-2xl p-8 flex flex-col justify-between hover:shadow-md hover:-translate-y-1.5 shadow-sm transition-all duration-300 group cursor-pointer ${
                           isActive
                             ? borderActiveColors[index]
                             : 'border-slate-200/60 dark:border-white/5 bg-slate-50/50 dark:bg-slate-card/25 hover:border-slate-300 dark:hover:border-white/15'
@@ -224,7 +215,7 @@ export default function HowItWorks() {
                           setIsHovered(true);
                         }}
                         onMouseLeave={() => setIsHovered(false)}
-                        className={`w-full bg-white dark:bg-slate-card border rounded-2xl p-8 flex flex-col justify-between hover:shadow-md hover:-translate-y-1.5 shadow-sm transition-all duration-300 group cursor-pointer ${
+                        className={`w-full bg-white dark:bg-slate-card border aurora-card rounded-2xl p-8 flex flex-col justify-between hover:shadow-md hover:-translate-y-1.5 shadow-sm transition-all duration-300 group cursor-pointer ${
                           isActive
                             ? borderActiveColors[index]
                             : 'border-slate-200/60 dark:border-white/5 bg-slate-50/50 dark:bg-slate-card/25 hover:border-slate-300 dark:hover:border-white/15'
