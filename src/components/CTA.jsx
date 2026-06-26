@@ -9,9 +9,7 @@ export default function CTA() {
       
       <div className="mx-auto max-w-5xl px-6">
         <div className="relative rounded-3xl border border-slate-200/60 dark:border-white/5 aurora-card bg-gradient-to-b from-slate-50/80 to-slate-50/30 dark:from-slate-card/60 dark:to-slate-card/20 px-8 py-12 md:p-16 text-center backdrop-blur-sm overflow-hidden shadow-sm hover:border-accent-blue/30 dark:hover:border-accent-blue/20 hover:shadow-lg hover:shadow-accent-blue/5 transition-all duration-500 group">
-          {/* Top light beam */}
-          <div className="absolute top-0 left-1/4 right-1/4 h-[1px] bg-gradient-to-r from-transparent via-accent-blue/50 to-transparent"></div>
-          
+
           <h2 className="font-display text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl mb-4">
             Ready to Automate Your Workloads?
           </h2>
